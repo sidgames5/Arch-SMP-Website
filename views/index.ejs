@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arch SMP</title>
+
+	<link rel="stylesheet" href="/stylesheets/style.css">
+	<script src="/stylesheets/script.js"></script>
+
+	<style>
+		.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			transition: 0.4s;
+		}
+
+		.active,
+		.accordion:hover {
+			background-color: #ccc;
+		}
+
+		.panel {
+			padding: 0 18px;
+			display: none;
+			background-color: white;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h1>
+			Arch SMP Season <%= locals.seasonNumber || "error" %>
+		</h1>
+	</div>
+	<div class="sidebar">
+		<button class="accordion">Players</button>
+		<div class="panel">
+			<ul>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=34ee5e76f366f4c1&scale=4" alt="" width="16pt">
+					9bug</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=111eca959ba8c25f&scale=4" alt="" width="16pt">
+					AnotherSlime</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=1bb7caaf92a0d99f&scale=4" alt="" width="16pt">
+					Furnace107</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=79715654871a419d&scale=4" alt="" width="16pt">
+					GravityAce</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=2d599ea2b883f94a&scale=4" alt="" width="16pt">
+					LeWolfYT</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=12b92a9206470fe2&scale=4" alt="" width="16pt">
+					(patrick please replace this)</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=fc522249b53b0e91&scale=4" alt="" width="16pt">
+					obugx2x</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=fd202be1e6528b88&scale=4" alt="" width="16pt">
+					SidGames5</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=b5d02329e0b5b95e&scale=4" alt="" width="16pt">
+					Thomasx87x</li>
+				<li><img src="https://s.namemc.com/2d/skin/face.png?id=d3fe59ec6e25fea8&scale=4" alt="" width="16pt">
+					TriplePear</li>
+			</ul>
+		</div>
+
+		<button class="accordion">Links</button>
+		<div class="panel">
+
+		</div>
+
+		<button class="accordion">Maps</button>
+		<div class="panel">
+		</div>
+
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.display === "block") {
+						panel.style.display = "none";
+					} else {
+						panel.style.display = "block";
+					}
+				});
+			}
+		</script>
+	</div>
+</body>
+
+</html>
