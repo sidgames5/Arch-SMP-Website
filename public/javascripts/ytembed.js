@@ -1,6 +1,6 @@
 var reqURL =
 	"https://api.rss2json.com/v1/api.json?rss_url=" +
-	encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+	encodeURIComponent("https://www.youtube.com/feeds/videos.xml?playlist_id=");
 function loadVideo(iframe) {
 	$.getJSON(reqURL + iframe.getAttribute("cid"), function (data) {
 		var videoNumber = iframe.getAttribute("vnum")
