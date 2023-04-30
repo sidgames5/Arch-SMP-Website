@@ -17,7 +17,6 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", async (req, res) => {
-	let onlinePlayers = [];
 	let players = {
 		p9bug: "",
 		panotherslime: "",
@@ -37,10 +36,6 @@ app.get("/", async (req, res) => {
 			let list = res.data.players.list;
 
 			for (let i = 0; i < list.length; i++) {
-				onlinePlayers.push(list[i].name_clean);
-
-				console.log(list[i].name_clean);
-
 				if (list[i].name_clean == "9bug") players.p9bug = "•";
 				if (list[i].name_clean == "AnotherSlime")
 					players.panotherslime = "•";
@@ -58,8 +53,6 @@ app.get("/", async (req, res) => {
 				if (list[i].name_clean == "TriplePear")
 					players.ptriplepear = "•";
 			}
-
-			console.log(onlinePlayers);
 		})
 		.catch((err) => console.log(err));
 
