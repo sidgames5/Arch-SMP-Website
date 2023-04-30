@@ -17,6 +17,6 @@ function loadVideo(iframe) {
 	});
 }
 var iframes = document.getElementsByClassName("latestVideoEmbed");
-for (var i = 0, len = iframes.length; i < len; i++) {
+for (var i = iframes.length, len = 0; i > len; i--) {
 	loadVideo(iframes[i]);
 }
