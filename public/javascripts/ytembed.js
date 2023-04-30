@@ -9,6 +9,7 @@ function loadVideo(iframe) {
 		console.log(data.items.length - videoNumber);
 		console.log(data.items);
 		var link = data.items[data.items.length - videoNumber].link;
+		console.log(data.items[data.items.length - videoNumber].link)
 		id = link.substr(link.indexOf("=") + 1);
 		iframe.setAttribute(
 			"src",
