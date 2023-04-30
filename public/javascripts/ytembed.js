@@ -7,6 +7,7 @@ function loadVideo(iframe) {
 			? Number(iframe.getAttribute("vnum"))
 			: 0;
 		console.log(data.items.length - videoNumber);
+		console.log(data.items);
 		var link = data.items[videoNumber].link;
 		id = link.substr(link.indexOf("=") + 1);
 		iframe.setAttribute(
@@ -16,6 +17,6 @@ function loadVideo(iframe) {
 	});
 }
 var iframes = document.getElementsByClassName("latestVideoEmbed");
-for (var i = iframes.length, len = 0; i > len; i--) {
+for (var i = 0, len = iframes.length; i < len; i++) {
 	loadVideo(iframes[i]);
 }
