@@ -9,3 +9,11 @@ li {
 * {
 	font-family: sans-serif;
 }
+
+.green-dot {
+	color: green;
+}
+
+.blue-dot {
+	color: #00aaff;
+}
