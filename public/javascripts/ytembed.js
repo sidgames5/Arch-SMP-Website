@@ -6,8 +6,7 @@ function loadVideo(iframe) {
 		var videoNumber = iframe.getAttribute("vnum")
 			? Number(iframe.getAttribute("vnum"))
 			: 0;
-		console.log(videoNumber);
-		console.log(data.items);
+		console.log(data.items.length - videoNumber);
 		var link = data.items[videoNumber].link;
 		id = link.substr(link.indexOf("=") + 1);
 		iframe.setAttribute(
