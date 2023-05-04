@@ -18,3 +18,11 @@ li {
 .blue-dot {
 	color: #00aaff;
 }
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
