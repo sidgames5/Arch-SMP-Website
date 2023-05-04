@@ -71,6 +71,10 @@ app.get("/", async (req, res) => {
 	});
 });
 
+app.get("/streamday/", (req, res) => {
+	res.render("streamday/index");
+});
+
 app.get("/maps", (req, res) => {
 	res.sendStatus(501);
 });
