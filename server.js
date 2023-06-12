@@ -7,7 +7,7 @@ const app = express();
 const port = 80;
 
 const season = {
-	number: 3,
+	number: 4,
 };
 
 const axios = require("axios");
@@ -21,13 +21,16 @@ app.get("/", async (req, res) => {
 		p9bug: "",
 		panotherslime: "",
 		pfurnace107: "",
-		pgravityace: "",
+		pfrance107: "",
 		plewolfyt: "",
 		ppatrick: "",
 		pobugx2x: "",
 		psid: "",
 		pthomasx87x: "",
 		ptriplepear: "",
+		parent: "",
+		pbored: "",
+		pdolphin: "",
 	};
 
 	await axios
@@ -41,8 +44,7 @@ app.get("/", async (req, res) => {
 					players.panotherslime = "•";
 				if (list[i].name_clean == "Furnace107")
 					players.pfurnace107 = "•";
-				if (list[i].name_clean == "GravityAce")
-					players.pgravityace = "•";
+				if (list[i].name_clean == "France107") players.pfrance107 = "•";
 				if (list[i].name_clean == "LeW0lfYT") players.plewolfyt = "•";
 				if (list[i].name_clean == "obugx2x") players.pobugx2x = "•";
 				if (list[i].name_clean == "SearCorgi4955")
@@ -52,6 +54,9 @@ app.get("/", async (req, res) => {
 					players.pthomasx87x = "•";
 				if (list[i].name_clean == "TriplePear")
 					players.ptriplepear = "•";
+				if (list[i].name_clean == "Arent_itFunny") players.parent = "•";
+				if (list[i].name_clean == "boredlake") players.pbored = "•";
+				if (list[i].name_clean == "dolphindot") players.pdolphin = "•";
 			}
 		})
 		.catch((err) => console.log(err));
@@ -61,13 +66,16 @@ app.get("/", async (req, res) => {
 		p9bug: players.p9bug,
 		panotherslime: players.panotherslime,
 		pfurnace107: players.pfurnace107,
-		pgravityace: players.pgravityace,
+		pfrance107: players.pfrance107,
 		plewolfyt: players.plewolfyt,
 		ppatrick: players.ppatrick,
 		pobugx2x: players.pobugx2x,
 		psid: players.psid,
 		pthomasx87x: players.pthomasx87x,
 		ptriplepear: players.ptriplepear,
+		parent: players.parent,
+		pbored: players.pbored,
+		pdolphin: players.pdolphin,
 	});
 });
 
