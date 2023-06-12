@@ -5,6 +5,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Arch SMP Stream Day</title>
+
+	<script src="../javascripts/script.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+	<style>
+		.accordion {
+			background-color: #eee;
+			color: #444;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			transition: 0.4s;
+		}
+
+		.active,
+		.accordion:hover {
+			background-color: #ccc;
+		}
+
+		.panel {
+			padding: 0 18px;
+			display: none;
+			background-color: white;
+			overflow: hidden;
+		}
+	</style>
 </head>
 
 <body>
