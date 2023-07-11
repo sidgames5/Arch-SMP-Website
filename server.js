@@ -85,11 +85,12 @@ app.get("/streamday/", (req, res) => {
 
 app.get("/maps", (req, res) => {
 	res.render("maps/index");
+	console.log(__dirname);
 });
 
-app.get("/maps/season", (req, res) => {
-	console.log(__dirname + req.path);
-	res.sendFile(__dirname + req.path);
+app.get("/maps/season1", (req, res) => {
+	console.log(__dirname);
+	res.sendFile(__dirname);
 });
 
 app.listen(port, "0.0.0.0");
