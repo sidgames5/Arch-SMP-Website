@@ -84,11 +84,8 @@ app.get("/streamday/", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
-	if (req.path.includes("season")) {
-		console.log(__dirname + "/views/maps/season/1.zip");
-	} else {
-		res.render("maps/index");
-	}
+	console.log(req.path);
+	res.render("maps/index");
 });
 
 app.get("/maps/season1", (req, res) => {});
