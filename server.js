@@ -92,4 +92,19 @@ app.get("/maps/s1", (req, res) => {
 	res.sendFile(__dirname + "/maps/s1.zip");
 });
 
+app.get("/maps/s2", (req, res) => {
+	console.log(req.path);
+	res.sendFile(__dirname + "/maps/s2.zip");
+});
+
+app.get("/maps/s3", (req, res) => {
+	console.log(req.path);
+	res.sendFile(__dirname + "/maps/s3.zip");
+});
+
+app.get("/maps/s4", (req, res) => {
+	console.log(req.path);
+	res.sendFile(__dirname + "/maps/s4.zip");
+});
+
 app.listen(port, "0.0.0.0");
