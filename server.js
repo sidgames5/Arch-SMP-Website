@@ -84,7 +84,8 @@ app.get("/streamday/", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
-	res.sendStatus(501);
+	console.log(req.url);
+	res.sendFile(req.url);
 });
 
 app.listen(port, "0.0.0.0");
