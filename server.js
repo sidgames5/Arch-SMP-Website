@@ -84,13 +84,13 @@ app.get("/streamday/", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
-	console.log(__dirname + "/views/maps/season/1.zip");
-	res.render("maps/index");
+	if (req.path.includes("season")) {
+		console.log(__dirname + "/views/maps/season/1.zip");
+	} else {
+		res.render("maps/index");
+	}
 });
 
-app.get("/maps/season1", (req, res) => {
-	console.log(__dirname + "/views/maps/season/1.zip");
-	res.sendFile(__dirname);
-});
+app.get("/maps/season1", (req, res) => {});
 
 app.listen(port, "0.0.0.0");
