@@ -88,7 +88,7 @@ app.get("/maps", (req, res) => {
 });
 
 app.get("/maps/season", (req, res) => {
-	res.sendFile(req.url.substring(1));
+	res.sendFile(req.url);
 });
 
 app.listen(port, "0.0.0.0");
