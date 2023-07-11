@@ -88,6 +88,4 @@ app.get("/maps", (req, res) => {
 	res.render("maps/index");
 });
 
-app.get("/maps/season1", (req, res) => {});
-
 app.listen(port, "0.0.0.0");
