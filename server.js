@@ -87,8 +87,8 @@ app.get("/maps", (req, res) => {
 	res.render("maps/index");
 });
 
-app.get("/maps/season/1.zip", (req, res) => {
-	res.sendFile("/maps/season/1.zip");
+app.get("/maps", (req, res) => {
+	res.sendFile(__dirname + req.path);
 });
 
 app.listen(port, "0.0.0.0");
