@@ -84,12 +84,12 @@ app.get("/streamday/", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
+	console.log(__dirname + "/views/maps/season/1.zip");
 	res.render("maps/index");
-	console.log(__dirname);
 });
 
-app.get("/maps/season", (req, res) => {
-	console.log(__dirname);
+app.get("/maps/season1", (req, res) => {
+	console.log(__dirname + "/views/maps/season/1.zip");
 	res.sendFile(__dirname);
 });
 
