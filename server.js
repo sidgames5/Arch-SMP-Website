@@ -88,6 +88,7 @@ app.get("/maps", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
+	console.log(__dirname + req.path);
 	res.sendFile(__dirname + req.path);
 });
 
