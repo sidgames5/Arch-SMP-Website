@@ -84,8 +84,11 @@ app.get("/streamday/", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
-	console.log(req.path);
 	res.render("maps/index");
+});
+
+app.get("/maps/s1", (req, res) => {
+	console.log(req.path);
 });
 
 app.listen(port, "0.0.0.0");
