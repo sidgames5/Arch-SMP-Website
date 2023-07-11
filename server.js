@@ -88,7 +88,7 @@ app.get("/maps", (req, res) => {
 	console.log(__dirname);
 });
 
-app.get("/maps/season1", (req, res) => {
+app.get("/maps/season", (req, res) => {
 	console.log(__dirname);
 	res.sendFile(__dirname);
 });
