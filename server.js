@@ -89,6 +89,7 @@ app.get("/maps", (req, res) => {
 
 app.get("/maps/s1", (req, res) => {
 	console.log(req.path);
+	res.sendFile(__dirname + "/maps/s1.zip");
 });
 
 app.listen(port, "0.0.0.0");
