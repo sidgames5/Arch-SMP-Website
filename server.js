@@ -87,7 +87,7 @@ app.get("/maps", (req, res) => {
 	res.render("maps/index");
 });
 
-app.get("/maps/season/1", (req, res) => {
+app.get("/maps/season/1.zip", (req, res) => {
 	res.sendFile("/maps/season/1.zip");
 });
 
