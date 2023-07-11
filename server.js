@@ -84,8 +84,7 @@ app.get("/streamday/", (req, res) => {
 });
 
 app.get("/maps", (req, res) => {
-	console.log(req.url);
-	res.sendFile(req.url);
+	res.render("maps/index");
 });
 
 app.listen(port, "0.0.0.0");
