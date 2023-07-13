@@ -7,7 +7,9 @@ const app = express();
 const port = 80;
 
 const season = {
-	number: 4,
+	number: 5,
+	applink:
+		"https://docs.google.com/forms/d/e/1FAIpQLSdsrLXAlBXydOyFJwyZXrMKnwp-S5yzJlPRVuI2n1CLstbYcg/viewform",
 };
 
 const axios = require("axios");
@@ -105,6 +107,34 @@ app.get("/maps/s3", (req, res) => {
 app.get("/maps/s4", (req, res) => {
 	console.log(req.path);
 	res.sendFile(__dirname + "/maps/s4.zip");
+});
+
+app.get("/apply", (req, res) => {
+	res.render("form-redirect", {
+		sn: season.number,
+		link: season.applink,
+	});
+});
+
+app.get("/application", (req, res) => {
+	res.render("form-redirect", {
+		sn: season.number,
+		link: season.applink,
+	});
+});
+
+app.get("/join", (req, res) => {
+	res.render("form-redirect", {
+		sn: season.number,
+		link: season.applink,
+	});
+});
+
+app.get("/play", (req, res) => {
+	res.render("form-redirect", {
+		sn: season.number,
+		link: season.applink,
+	});
 });
 
 app.listen(port, "0.0.0.0");
