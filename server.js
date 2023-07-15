@@ -34,6 +34,8 @@ app.get("/", async (req, res) => {
 		pbored: "",
 		pdolphin: "",
 		pgentlellama: "",
+		p4487: "",
+		pwally: "",
 	};
 
 	await axios
@@ -60,7 +62,9 @@ app.get("/", async (req, res) => {
 				if (list[i].name_clean == "Arent_itFunny") players.parent = "•";
 				if (list[i].name_clean == "boredlake") players.pbored = "•";
 				if (list[i].name_clean == "dolphindot") players.pdolphin = "•";
-				if (list[i].name_clean == "GentleLlama7037") players.pdolphin = "•";
+				if (list[i].name_clean == "GentleLlama7037") players.pgentlellama = "•";
+				if (list[i].name_clean == "4487") players.p4487 = "•";
+				if (list[i].name_clean == "WallyWallerson") players.pwally = "•";
 			}
 		})
 		.catch((err) => console.log(err));
@@ -81,6 +85,8 @@ app.get("/", async (req, res) => {
 		pbored: players.pbored,
 		pdolphin: players.pdolphin,
 		pgentlellama: players.pgentlellama,
+		pwally: players.pwally,
+		p4487: players.p4487,
 	});
 });
 
