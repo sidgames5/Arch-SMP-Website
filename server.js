@@ -36,6 +36,7 @@ app.get("/", async (req, res) => {
 		pgentlellama: "",
 		p4487: "",
 		pwally: "",
+		pdonk: "",
 	};
 
 	await axios
@@ -65,6 +66,8 @@ app.get("/", async (req, res) => {
 				if (list[i].name_clean == "GentleLlama7037") players.pgentlellama = "•";
 				if (list[i].name_clean == "4487") players.p4487 = "•";
 				if (list[i].name_clean == "WallyWallerson") players.pwally = "•";
+				
+				if (list[i].name_clean == "Donk__") players.pdonk = "•";
 			}
 		})
 		.catch((err) => console.log(err));
@@ -87,6 +90,7 @@ app.get("/", async (req, res) => {
 		pgentlellama: players.pgentlellama,
 		pwally: players.pwally,
 		p4487: players.p4487,
+		pdonk: players.pdonk,
 	});
 });
 
