@@ -150,4 +150,71 @@ app.get("/play", (req, res) => {
 	});
 });
 
+app.get("/players/4487", (req, res) => {
+	renderPlayer("4487", res);
+});
+
+app.get("/players/anotherslime", (req, res) => {
+	renderPlayer("anotherslime", res);
+});
+
+app.get("/players/arent_itfunny", (req, res) => {
+	renderPlayer("arent_itfunny", res);
+});
+
+app.get("/players/boredlake", (req, res) => {
+	renderPlayer("boredlake", res);
+});
+
+app.get("/players/dolphindot", (req, res) => {
+	renderPlayer("dolphindot", res);
+});
+
+app.get("/players/furnace107", (req, res) => {
+	renderPlayer("furnace107", res);
+});
+
+app.get("/players/gentlellama7037", (req, res) => {
+	renderPlayer("gentlellama7037", res);
+});
+
+app.get("/players/gravityace", (req, res) => {
+	renderPlayer("gravityace", res);
+});
+
+app.get("/players/sidgames5", (req, res) => {
+	renderPlayer("sidgames5", res);
+});
+
+app.get("/players/thomasx87x", (req, res) => {
+	renderPlayer("thomasx87x", res);
+});
+
+app.get("/players/triplepear", (req, res) => {
+	renderPlayer("triplepear", res);
+});
+
+app.get("/players/wallywallerson", (req, res) => {
+	renderPlayer("wallywallerson", res);
+});
+
+const playerBios = {
+	bio_4487: "This player has not set a bio yet.",
+	bio_anotherslime: "This player has not set a bio yet.",
+	bio_arentitfunny: "This player has not set a bio yet.",
+	bio_boredlake: "This player has not set a bio yet.",
+	bio_dolphindot: "This player has not set a bio yet.",
+	bio_furnace107: "This player has not set a bio yet.",
+	bio_gentlellama7037: "This player has not set a bio yet.",
+	bio_gravityace: "This player has not set a bio yet.",
+	bio_sidgames5: "This player has not set a bio yet.",
+	bio_thomasx87x: "This player has not set a bio yet.",
+	bio_triplepear: "This player has not set a bio yet.",
+	bio_wallywallerson: "This player has not set a bio yet.",
+};
+
+function renderPlayer(player, res) {
+	res.render("players/" + player, playerBios);
+}
+
 app.listen(port, "0.0.0.0");
