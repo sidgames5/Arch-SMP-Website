@@ -37,6 +37,7 @@ app.get("/", async (req, res) => {
 		p4487: "",
 		pwally: "",
 		pdonk: "",
+		pfreak: "",
 	};
 
 	await axios
@@ -66,7 +67,7 @@ app.get("/", async (req, res) => {
 				if (list[i].name_clean == "GentleLlama7037") players.pgentlellama = "•";
 				if (list[i].name_clean == "4487") players.p4487 = "•";
 				if (list[i].name_clean == "WallyWallerson") players.pwally = "•";
-				
+				if (list[i].name_clean == "sayWHAAAAAAAT") players.pfreak = "•";
 				if (list[i].name_clean == "Donk__") players.pdonk = "•";
 			}
 		})
@@ -91,6 +92,7 @@ app.get("/", async (req, res) => {
 		pwally: players.pwally,
 		p4487: players.p4487,
 		pdonk: players.pdonk,
+		pfreak: players.pfreak,
 	});
 });
 
@@ -211,6 +213,7 @@ const playerBios = {
 	bio_thomasx87x: "This player has not set a bio yet.",
 	bio_triplepear: "This player has not set a bio yet.",
 	bio_wallywallerson: "This player has not set a bio yet.",
+	bio_untitled_freak: "This player has not set a bio yet.",
 };
 
 function renderPlayer(player, res) {
